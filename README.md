@@ -1,7 +1,7 @@
 
 # Stack-based VM in C
 
-A clean, minimal, and modular stack-based virtual machine written in C — inspired by the Java Virtual Machine (JVM).  
+A clean, minimal, and modular stack-based virtual machine written in C, inspired by the Java Virtual Machine (JVM).  
 This project is built **purely for learning purposes**, to deeply understand virtual machines from the ground up.
 
 ---
@@ -171,7 +171,7 @@ This project is licensed under the [MIT License](./LICENSE).
 
 ---
 
-## 🧠 Author's Intent
+## 🧠 My Intent For this Project
 
 This project is for anyone who wants to:
 
