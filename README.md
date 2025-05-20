@@ -1,6 +1,5 @@
 
 # Stack-based VM in C
- test
 A clean, minimal, and modular stack-based virtual machine written in C, inspired by the Java Virtual Machine (JVM).  
 This project is built **purely for learning purposes**, to deeply understand virtual machines from the ground up.
 
