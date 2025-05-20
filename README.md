@@ -180,3 +180,10 @@ This project is for anyone who wants to:
 
 ---
 
+## My Future Plannign for this:
+ 1. Performance
+ 2. Optimization
+ 3. Profiling
+ 4. Benchmarking
+
+ ---
