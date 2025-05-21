@@ -59,7 +59,7 @@ stack_based_vm_in_c/
 │   ├── parser.c / parser.h             # Parser (generates AST from tokens)
 │   ├── ast.h                           # AST node structure
 │   ├── codegen.c / codegen.h           # Bytecode generation from AST
-│   ├── symbol_table.c / symbol_table.h# Tracks functions, variables
+│   ├── symbol_table.c / symbol_table.h # Tracks functions, variables
 │   ├── tokens.h                        # Token definitions
 │   ├── compiler_main.c                 # CLI frontend (e.g., ./myc program.mylang)
 │   └── README.md                       # Notes on syntax, grammar, output format
