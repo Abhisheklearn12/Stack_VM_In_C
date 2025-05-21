@@ -22,66 +22,79 @@ This project is built **purely for learning purposes**, to deeply understand vir
 ## 📁 Project Structure
 
 ```bash
-stack-vm-c/
-├── include/                   # Header files (VM API and internals)
-│   ├── vm.h                   # VM definition and lifecycle
-│   ├── class_loader.h         # Class file loading
-│   ├── bytecode.h             # Bytecode format & parser
-│   ├── instructions.h         # Opcode definitions
-│   ├── stack.h                # Operand stack, call frames
-│   ├── heap.h                 # Object memory, allocations
-│   ├── gc.h                   # Garbage collector
-│   ├── types.h                # Enums, constants, types
-│   ├── runtime.h              # Runtime orchestration
-│   ├── interpreter.h          # Fetch-decode-execute loop
+stack_based_vm_in_c/
+├── include/                            # Header files (API + internal)
+│   ├── vm.h                            # VM struct and lifecycle
+│   ├── class_loader.h                  # Class loading logic
+│   ├── bytecode.h                      # Bytecode definitions and parser
+│   ├── instructions.h                  # Instruction set
+│   ├── stack.h                         # Stack and frame management
+│   ├── heap.h                          # Heap & object memory management
+│   ├── gc.h                            # Garbage collector
+│   ├── types.h                         # Core types, enums, constants
+│   ├── runtime.h                       # Main runtime entry point
+│   ├── interpreter.h                   # Instruction dispatch loop
+│   ├── stdlib/                         # Standard VM APIs (e.g., println, math)
+│   │   ├── io.h
+│   │   └── math.h
+│   └── utils.h                         # Common utilities, error handling
+
+├── src/                                # C source code files
+│   ├── vm.c                            # VM struct and lifecycle (init, run, destroy)
+│   ├── class_loader.c                  # Loads class files (.class, .myclass, etc.)
+│   ├── bytecode.c                      # Bytecode parsing, validation
+│   ├── instructions.c                  # Implement all opcodes
+│   ├── stack.c                         # Operand stack, call stack
+│   ├── heap.c                          # Object heap, memory allocation
+│   ├── gc.c                            # Mark-and-sweep or generational GC
+│   ├── runtime.c                       # Main execution flow
+│   ├── interpreter.c                   # Instruction fetch-decode-execute
 │   ├── stdlib/
-│   │   ├── io.h               # println, input
-│   │   └── math.h             # math operations
-│   └── utils.h                # Logging, error helpers
-│
-├── src/                       # Core VM implementation
-│   ├── vm.c
-│   ├── class_loader.c
-│   ├── bytecode.c
-│   ├── instructions.c
-│   ├── stack.c
-│   ├── heap.c
-│   ├── gc.c
-│   ├── runtime.c
-│   ├── interpreter.c
-│   ├── stdlib/
-│   │   ├── io.c
-│   │   └── math.c
-│   └── utils.c
-│
-├── tests/                     # Unit and integration tests
+│   │   ├── io.c                        # Built-in I/O support
+│   │   └── math.c                      # Built-in math operations
+│   └── utils.c                         # Logging, assertions, diagnostics
+
+├── compiler/                           # Source-to-bytecode compiler
+│   ├── lexer.c / lexer.h               # Tokenizer for your language
+│   ├── parser.c / parser.h             # Parser (generates AST from tokens)
+│   ├── ast.h                           # AST node structure
+│   ├── codegen.c / codegen.h           # Bytecode generation from AST
+│   ├── symbol_table.c / symbol_table.h# Tracks functions, variables
+│   ├── tokens.h                        # Token definitions
+│   ├── compiler_main.c                 # CLI frontend (e.g., ./myc program.mylang)
+│   └── README.md                       # Notes on syntax, grammar, output format
+
+├── tools/                              # Bytecode tooling
+│   ├── assembler.c                     # Assembles .myasm → .myclass
+│   ├── disassembler.c                  # Disassembles .myclass → readable
+│   └── bytecode_defs.h                 # Shared opcode/instruction macros
+
+├── tests/                              # Unit and integration tests
 │   ├── test_vm.c
 │   ├── test_stack.c
 │   ├── test_gc.c
 │   ├── test_instructions.c
 │   └── test_bytecode.c
-│
-├── examples/                  # Compiled example programs
-│   ├── HelloWorld.myclass
+
+├── examples/                           # Sample programs
+│   ├── HelloWorld.mylang               # Source file for your language
+│   ├── Fibonacci.mylang
+│   ├── HelloWorld.myclass              # Compiled bytecode file
 │   ├── Fibonacci.myclass
 │   └── Benchmark.myclass
-│
-├── tools/                     # Tooling for bytecode
-│   ├── assembler.c            # Converts .myasm → .myclass
-│   ├── disassembler.c         # Converts .myclass → readable form
-│   └── bytecode_defs.h        # Shared opcode definitions
-│
-├── build/                     # Build artifacts (ignored in VCS)
-│
-├── docs/                      # Technical documentation
+
+├── build/                              # Build output (ignored in VCS)
+
+├── docs/                               # Documentation
 │   ├── architecture.md
 │   ├── bytecode_spec.md
 │   ├── vm_memory_model.md
-│   └── instruction_set.md
-│
-├── Makefile                   # Build configuration
-├── README.md                  # Project overview
-└── LICENSE                    # MIT License
+│   ├── instruction_set.md
+│   └── compiler_design.md              # Compiler internals, AST, grammar, etc.
+
+├── Makefile                            # Build script
+├── README.md                           # Project overview, usage, build
+└── LICENSE                             # Open-source license
 ````
 
 ---
