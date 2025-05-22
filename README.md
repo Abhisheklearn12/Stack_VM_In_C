@@ -6,7 +6,7 @@ This project is built **purely for learning purposes**, to deeply understand vir
 ---
 
 ## Here's the Architecture Diagram:
-![Architecture Diagram](images/Architecture.png)
+![Architecture Diagram](images/Architecture_Diagram.png)
 
 ---
 
