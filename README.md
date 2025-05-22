@@ -198,5 +198,6 @@ This project is for anyone who wants to:
  2. Optimization
  3. Profiling
  4. Benchmarking
+ 5. Debugging (it's a must skill, I am still learning this a lot.)
 
  ---
