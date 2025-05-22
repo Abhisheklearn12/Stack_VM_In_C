@@ -5,6 +5,11 @@ This project is built **purely for learning purposes**, to deeply understand vir
 
 ---
 
+## Here's the Architecture Diagram:
+![Architecture Diagram](images/Architecture.png)
+
+---
+
 ## 🚀 Project Goals
 
 - Understand the inner workings of virtual machines.
