@@ -57,3 +57,9 @@ typedef struct VM {
  * @return Pointer to an initialized VM instance.
  */
 
+/* This is just fro example and making the entire reason and faking it untill you try.
+* this is for fun things and making it a lot better.
+* Q1. How do we manage the entire satire thing that can be stolenm for a while and making it
+* fucking things and doing for a "WHILE".
+*/
+
