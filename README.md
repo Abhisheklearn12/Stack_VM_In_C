@@ -6,8 +6,6 @@ This VM reads a custom bytecode format and executes it using a stack-oriented ar
 
 > ✅ Built for developers who want to understand how virtual machines work from the ground up.
 
----
-
 ## 📁 Project Structure
 
 c-stack-vm/
